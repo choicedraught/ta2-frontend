@@ -1,0 +1,40 @@
+.button-holder {
+    display:grid;
+    grid-template-columns: 32% 32% 32%;
+	  /*grid-template-columns: 200px 200px 200px;*/
+	  /*grid-template-rows: 100px 100px 100px 100px 100px 100px;*/
+	  grid-gap: 5px;
+	  background-color: #fff;
+	  color: var(--club-blue);
+    width:100%;
+  }
+  .float-left { position: float-left;}
+  .float-right { position: float-right;}
+  .available {
+    display: inline;
+    background-color: #47b947;
+    color: white;
+    /*width:300px;*/
+    height:var(--button-height);
+  }
+  .unavailable {
+    display: inline;
+    background-color: #f34949;
+    color: white;
+    /*width:300px;*/
+    height:var(--button-height);
+  }
+  .maybe {
+    display: inline;
+    background-color: #efa92a;
+    color: white;
+    /*width:300px;*/
+    height: var(--button-height);
+  }
+  .availnotset {
+    display: inline;
+    background-color: grey;
+    color: white;
+    /*width:300px;*/
+    height: var(--button-height);
+  }
