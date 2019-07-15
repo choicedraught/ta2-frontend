@@ -7,7 +7,6 @@ import CompRoundsDay from './CompRoundsDay';
 const CompRounds = () => {
 
   // setup our Global State objects from easy peasy
-  // const uid = useStoreState(state => state.uid);
   // const season = useStoreState(state => state.season);
   const activeComp = useStoreState(state => state.activeComp); // this should be a prop that is passed from the App.js I thinK?  Not global state.
   // const avset = useStoreState(state => state.avset);
@@ -18,6 +17,8 @@ const CompRounds = () => {
   // const availUpdate = useStoreActions(
   //   actions => actions.avset[availIndex].availUpdate
   // );
+
+
   
   // Render a div for each round
   // Render a new Component

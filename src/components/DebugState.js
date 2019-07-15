@@ -44,16 +44,5 @@ const DebugState = () => {
     </React.Fragment>
   )      
 }
- 
-
-// class DebugState extends React.Component {
-//   render() {
-//        // data could be a prop for example
-//        // const { data } = this.props;
-//        return (<div><pre>{JSON.stringify(avset, null, 2) }</pre></div>);
-//   }
-// }
-
-// ReactDOM.render(<PrettyPrintJson/>, document.getElementById('container'));
 
 export default DebugState

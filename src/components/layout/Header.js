@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <header style={headerStyle}>
-      <h1>Tigers Availability Tracker</h1>
-      <Link style={linkStyle} to='/'>home</Link> |
+      Tigers Player Management |
+      <Link style={linkStyle} to='/'> home</Link> |
       <Link style={linkStyle} to='/availability'> availability</Link> |
-      <Link style={linkStyle} to='/About'> about</Link>
+      <Link style={linkStyle} to='/subs'> subs</Link> |
+      <Link style={linkStyle} to='/about'> about</Link>
     </header>
   )
 }

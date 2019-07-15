@@ -1,8 +1,12 @@
-import { action, debug } from 'easy-peasy';
+import { action, debug, thunk } from 'easy-peasy';
 export default {
     uid: "3534534653635",
+    setUid: action((state,payload) => {
+      console.log(debug(payload))
+      state.uid = payload
+    }),
     activeComp: "u1517",
-    season: "1819",
+    season: "1920",
     prettyDays: {
       "day_1": "Day One",
       "day_2": "Day Two"
@@ -96,7 +100,7 @@ export default {
     },
     avset:
     {
-      "3534534653635:prem:1819" : {
+      "3534534653635:prem:1920" : {
         "rounds": {
             "round_1" : {"day_1": "A"},
             "round_2" : {"day_1": "A"},
@@ -115,14 +119,14 @@ export default {
       state.activeComp = payload
     }),
     compAvailInsert: action((state,payload) => {
-      console.log(debug(payload));
+      // console.log(debug(payload));
       var availIndex = state.uid + ":" + state.activeComp + ":" + state.season
       state.avset[availIndex] = payload;
     }),
     availUpdate: action((state, payload) => {
       console.log(debug(payload));
-      console.log(debug(Object.keys(payload)[0]));
-      console.log(debug(Object.values(payload)[0]));
+      // console.log(debug(Object.keys(payload)[0]));
+      // console.log(debug(Object.values(payload)[0]));
       // seems like you need to declare the state object and then add the value to it.
       var key = {} 
       key = Object.keys(payload)[0];
@@ -536,5 +540,15 @@ export default {
           }
         }
       }
-    }
+    },
+    getCompRounds: thunk(async (actions, payload) => {
+            // In this example we call a service to save the todo
+            // const savedCompRounds = await todoService.save(payload);
+
+            // Then dispatch an action with the result to add it to our state
+            // actions.compRoundsSaved(savedCompRounds);
+    }),
+    compRoundsSaved: action((state, payload)=>{
+      state.compRounds.push(payload);
+    })
 }

@@ -1,0 +1,8 @@
+{
+	"auth": {
+		"ta2frontend9ad24de8": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}
